@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background: url('/media/euro.jpg') no-repeat center center fixed;
+    background: url('/media/amharclann-bord-gais.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: green;
+    color: white;
     font-family: 'Lato';
 }
 
