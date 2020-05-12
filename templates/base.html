@@ -15,7 +15,7 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -36,16 +36,17 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex justify-content-end">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-right">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex justify-content-between">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left justify-content-start">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">EOLAIRE GNÓ</h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+
+            <div class="d-flex justify-content-end bg-white col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item">
-                        <a class="text-black nav-link" style="background-color:red;border:black;" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-white nav-link" style="background-color:red;border:black;" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-plus fa-lg"></i></div>
                                 <p class="my-0">Cuir do Ghnólacht leis</p>
