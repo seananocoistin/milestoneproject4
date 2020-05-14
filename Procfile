@@ -1,0 +1,1 @@
+web: gunicorn bd.wsgi:application
