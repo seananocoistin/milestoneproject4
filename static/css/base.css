@@ -6,7 +6,7 @@ body {
     background: url('/media/amharclann-bord-gais.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: white;
+    color: #black;
     font-family: 'Oswald';
 }
 
@@ -68,6 +68,23 @@ body {
     position: fixed;
     background: white;
     z-index: -1;
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */
