@@ -15,6 +15,10 @@
             <div style="background-color:red;color:white;padding:50px;margin:200px 10px;text-align:center;opacity: 0.9;">
                 <div class="searchbox">
                     <label for="search"><h1 class="display-5 text-black">What are you looking for?</h1></label>
+                            <form action="">
+                                <input type="radio" id="b2c" name="b2c" value="consumer"><label for="b2c">I am a consumer looking for a product or a service</label><br>   
+                                <input type="radio" id="b2b" name="b2b" value="business"><label for="b2b">I am a business looking for other businesses</label><br>
+                            </form>
             </div>
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
