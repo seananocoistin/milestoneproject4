@@ -1,7 +1,7 @@
 {% load static %}
 
 <!doctype html>
-<html lang="en">
+<html lang="en"> <!-- comment -->
   <head>
 
     {% block meta %}
@@ -32,37 +32,23 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Business Directory {% block extra_title %}{% endblock %}</title>
+    <title>Eolaire Gnó {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex justify-content-between">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left justify-content-start">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Business</strong> Directory</h2>
+                    <h2 class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">EOLAIRE GNÓ</h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search here for a product or service">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="d-flex justify-content-end bg-white col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item">
                         <a class="text-white nav-link" style="background-color:red;border:black;" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-plus fa-lg"></i></div>
-                                <p class="my-0">Add a listing</p>
+                                <p class="my-0">Cuir do Ghnólacht leis</p>
                             </div>
                         </a>
                     </li>
@@ -70,7 +56,7 @@
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <p class="my-0">Mo Chuntas</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -78,11 +64,11 @@
                                 {% if request.user.is_superuser %}
                                     <a href="" class="dropdown-item">Product Management</a>
                                 {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a href="" class="dropdown-item">Mo Phróifíl</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Scoir</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Cláraigh</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Téigh Isteach</a>
                             {% endif %}
                         </div>
                     </li>
@@ -114,7 +100,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Purchase a premium directory listing for just €{{ free_delivery_threshold }}!</h4>                
+                <h4 class="logo-font my-1">Ceannaigh fógra mór san Eolaire ar €{{ free_delivery_threshold }}!</h4>                
             </div>            
         </div>
     </header>
