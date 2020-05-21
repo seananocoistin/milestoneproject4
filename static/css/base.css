@@ -106,6 +106,10 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+input-group w-100 {
+    text-align: center;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {

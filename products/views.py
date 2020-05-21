@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -18,6 +19,7 @@ def all_products(request):
     direction = None
 
     if request.GET:
+        print(request.GET)
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -39,6 +41,12 @@ def all_products(request):
 
         if 'q' in request.GET:
             query = request.GET['q']
+            if 'b2c' in request.GET:
+                # what to do if b2c is checked
+                print('b2c is checked')
+            if 'b2b' in request.GET:
+                # what to do if b2b is checked
+                print('b2b is checked')
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
@@ -70,6 +78,7 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def add_product(request):
     """ Add a product to the store """
     if request.method == 'POST':

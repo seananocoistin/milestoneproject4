@@ -15,11 +15,9 @@
             <div style="background-color:red;color:white;padding:50px;margin:200px 10px;text-align:center;opacity: 0.9;">
                 <div class="searchbox">
                     <label for="search"><h1 class="display-5 text-black">What are you looking for?</h1></label>
-                            <form action="">
-                                <input type="radio" id="b2c" name="b2c" value="consumer"><label for="b2c">I am a consumer looking for a product or a service</label><br>   
-                                <input type="radio" id="b2b" name="b2b" value="business"><label for="b2b">I am a business looking for other businesses</label><br>
-                            </form>
-            </div>
+                </div>
+                <h4>e.g. accountant, photographer...</h4>
+                <br>
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="I am looking for...">
@@ -31,9 +29,10 @@
                             </button>
                         </div>
                     </div>
-                </form>
                 <br>
-                <h4>e.g. accountant, photographer...</h4>
+                <input type="checkbox" id="b2c" name="b2c"><label for="b2c">I am a consumer looking for a product or a service</label><br>
+                <input type="checkbox" id="b2b" name="b2b"><label for="b2b">I am a business looking for other businesses</label>
+                </form>
             </div>
         </div>
     </div>
