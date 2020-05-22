@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font">Products</h2>
+                <h2 class="logo-font">Listings</h2>
                 {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
@@ -44,9 +44,9 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                                <span class="small"><a href="{% url 'products' %}">Listings</a> | </span>
                             {% endif %}
-                            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {{ products|length }} Listings{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                                             {% if product.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
