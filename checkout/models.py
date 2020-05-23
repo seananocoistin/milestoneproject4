@@ -6,7 +6,7 @@ from django.conf import settings
 
 from django_countries.fields import CountryField
 
-from listings.models import Listging
+from listings.models import Listing
 from profiles.models import UserProfile
 
 
