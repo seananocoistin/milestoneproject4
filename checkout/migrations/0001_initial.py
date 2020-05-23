@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('products', '0002_auto_20200515_1309'),
+        ('listings', '0002_auto_20200515_1309'),
     ]
 
     operations = [
@@ -37,11 +37,11 @@ class Migration(migrations.Migration):
             name='OrderLineItem',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('product_size', models.CharField(blank=True, max_length=2, null=True)),
+                ('listing_size', models.CharField(blank=True, max_length=2, null=True)),
                 ('quantity', models.IntegerField(default=0)),
                 ('lineitem_total', models.DecimalField(decimal_places=2, editable=False, max_digits=6)),
                 ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='lineitems', to='checkout.Order')),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.Product')),
+                ('listing', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='listings.Listing')),
             ],
         ),
     ]

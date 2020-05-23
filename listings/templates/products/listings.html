@@ -16,7 +16,7 @@
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Listings</h2>
                 {% for c in current_categories %}
-                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                    <a class="category-badge text-decoration-none" href="{% url 'listings' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                     </a>
                 {% endfor %}
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="product-container col-10 offset-1">
+            <div class="listing-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
@@ -44,48 +44,48 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'products' %}">Listings</a> | </span>
+                                <span class="small"><a href="{% url 'listings' %}">Listings</a> | </span>
                             {% endif %}
-                            {{ products|length }} Listings{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {{ listings|length }} Listings{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
                     </div>
                 </div>
                 <div class="row">
-                    {% for product in products %}
+                    {% for listing in listings %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                {% if listing.image %}
+                                <a href="{% url 'listing_detail' listing.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ listing.image.url }}" alt="{{ listing.name }}">
                                 </a>
                                 {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                <a href="{% url 'listing_detail' listing.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ listing.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    <p class="mb-0">{{ listing.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
-                                            {% if product.category %}
+                                            <p class="lead mb-0 text-left font-weight-bold">€{{ listing.price }}</p>
+                                            {% if listing.category %}
                                             <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                <a class="text-muted" href="{% url 'listings' %}?category={{ rlisting.category.name }}">
+                                                    <i class="fas fa-tag mr-1"></i>{{ listing.category.friendly_name }}
                                                 </a>
                                             </p>
                                             {% endif %}
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                            {% if listing.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ listing.rating }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                                    <a class="text-dangeer" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                    <a href="{% url 'edit_listing' listing.id %}">Edit</a> |
+                                                    <a class="text-dangeer" href="{% url 'delete_listing' listing.id %}">Delete</a>
                                                 </small>
                                             {% endif %}
                                         </div>

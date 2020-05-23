@@ -6,7 +6,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 
-from products.models import Product
+from listings.models import Listing
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from cart.contexts import cart_contents
@@ -60,11 +60,11 @@ def checkout(request):
             order.save()
             for item_id, item_data in cart.items():
                 try:
-                    product = Product.objects.get(id=item_id)
+                    listing = Listing.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
-                            product=product,
+                            listing=listing,
                             quantity=item_data,
                         )
                         order_line_item.save()
@@ -72,14 +72,14 @@ def checkout(request):
                         for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
-                                product=product,
+                                listing=listing,
                                 quantity=quantity,
-                                product_size=size,
+                                listing_size=size,
                             )
                             order_line_item.save()
-                except Product.DoesNotExist:
+                except Listing.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your cart wasn't found in our database. "
+                        "One of the listing in your cart wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -95,7 +95,7 @@ def checkout(request):
         cart = request.session.get('cart', {})
         if not cart:
             messages.error(request, "There's nothing in your cart at the moment")
-            return redirect(reverse('products'))
+            return redirect(reverse('listings'))
 
         current_cart = cart_contents(request)
         total = current_cart['grand_total']

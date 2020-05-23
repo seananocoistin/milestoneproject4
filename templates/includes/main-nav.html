@@ -6,58 +6,58 @@
             </a>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Listings<span class="caret"></span></a>
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-listings-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Listings<span class="caret"></span></a>
                   	<ul class="dropdown-menu border-0" role="menu" aria-labelledby="dropdownMenu">
                           <li class="divider"></li>
                         <li class="dropdown-submenu">
-                            <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                            <a href="{% url 'listings' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
 		                	<ul class="dropdown-menu" role="menu">
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Galway</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Leitrim</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Mayo</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Roscommon</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Sligo</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Galway</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Leitrim</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Mayo</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Roscommon</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Sligo</a></li>
                 			</ul>
                          <li class="divider"></li>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+		                	<a href="{% url 'listings' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
 		                	<ul class="dropdown-menu" role="menu">
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Carlow</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Dublin</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kildare</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kilkenny</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Laois</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Longford</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Louth</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Meath</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Offaly</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Westmeath</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Wexford</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Wicklow</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Carlow</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Dublin</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kildare</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kilkenny</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Laois</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Longford</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Louth</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Meath</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Offaly</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Westmeath</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Wexford</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Wicklow</a></li>
                 			</ul>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+		                	<a href="{% url 'listings' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
 		                	<ul class="dropdown-menu" role="menu">
-		                  		<li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Clare</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Cork</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kerry</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Limerick</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Tipperary</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Waterford</a></li>
+		                  		<li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Clare</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Cork</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kerry</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Limerick</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Tipperary</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Waterford</a></li>
                 			</ul>
                             <li class="divider"></li>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}" class="dropdown-item">All Listings</a>
+		                	<a href="{% url 'listings' %}" class="dropdown-item">All Listings</a>
 		                	<ul class="dropdown-menu" role="menu">
-		                  		<li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Antrim</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Armagh</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Cavan</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Derry</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Donegal</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Down</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Fermanagh</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Monaghan</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Tyrone</a></li>
+		                  		<li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Antrim</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Armagh</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Cavan</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Derry</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Donegal</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Down</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Fermanagh</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Monaghan</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Tyrone</a></li>
                 			</ul>
 		              	</li>
                     </ul>
@@ -68,54 +68,54 @@
                   	<ul class="dropdown-menu border-0" role="menu" aria-labelledby="dropdownMenu">
                           <li class="divider"></li>
                         <li class="dropdown-submenu">
-                            <a href="{% url 'products' %}?category=activewear,essentials" class="dropdown-item">Activewear &amp; Essentials</a>
+                            <a href="{% url 'listings' %}?category=activewear,essentials" class="dropdown-item">Activewear &amp; Essentials</a>
 		                	<ul class="dropdown-menu" role="menu">
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Galway</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Leitrim</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Mayo</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Roscommon</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Sligo</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Galway</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Leitrim</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Mayo</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Roscommon</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Sligo</a></li>
                 			</ul>
                          <li class="divider"></li>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?category=jeans" class="dropdown-item">Jeans</a>
+		                	<a href="{% url 'listings' %}?category=jeans" class="dropdown-item">Jeans</a>
 		                	<ul class="dropdown-menu" role="menu">
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Carlow</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Dublin</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kildare</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kilkenny</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Laois</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Longford</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Louth</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Meath</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Offaly</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Westmeath</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Wexford</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Wicklow</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Carlow</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Dublin</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kildare</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kilkenny</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Laois</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Longford</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Louth</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Meath</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Offaly</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Westmeath</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Wexford</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Wicklow</a></li>
                 			</ul>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?category=shirts" class="dropdown-item">Shirts</a>
+		                	<a href="{% url 'listings' %}?category=shirts" class="dropdown-item">Shirts</a>
 		                	<ul class="dropdown-menu" role="menu">
-		                  		<li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Clare</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Cork</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kerry</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Limerick</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Tipperary</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Waterford</a></li>
+		                  		<li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Clare</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Cork</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kerry</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Limerick</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Tipperary</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Waterford</a></li>
                 			</ul>
                             <li class="divider"></li>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?category=activewear,essentials,jeans,shirts" class="dropdown-item">All Clothing</a>
+		                	<a href="{% url 'listings' %}?category=activewear,essentials,jeans,shirts" class="dropdown-item">All Clothing</a>
 		                	<ul class="dropdown-menu" role="menu">
-		                  		<li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Antrim</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Armagh</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Cavan</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Derry</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Donegal</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Down</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Fermanagh</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Monaghan</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Tyrone</a></li>
+		                  		<li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Antrim</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Armagh</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Cavan</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Derry</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Donegal</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Down</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Fermanagh</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Monaghan</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Tyrone</a></li>
                 			</ul>
 		              	</li>
                     </ul>
@@ -126,54 +126,54 @@
                   	<ul class="dropdown-menu border-0" role="menu" aria-labelledby="dropdownMenu">
                           <li class="divider"></li>
                         <li class="dropdown-submenu">
-                            <a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Bed &amp; Bath</a>
+                            <a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Bed &amp; Bath</a>
 		                	<ul class="dropdown-menu" role="menu">
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Galway</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Leitrim</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Mayo</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Roscommon</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Sligo</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Galway</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Leitrim</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Mayo</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Roscommon</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Sligo</a></li>
                 			</ul>
                          <li class="divider"></li>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?category=kitchen_dining" class="dropdown-item">Kitchen &amp; Dining</a>
+		                	<a href="{% url 'listings' %}?category=kitchen_dining" class="dropdown-item">Kitchen &amp; Dining</a>
 		                	<ul class="dropdown-menu" role="menu">
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Carlow</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Dublin</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kildare</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kilkenny</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Laois</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Longford</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Louth</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Meath</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Offaly</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Westmeath</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Wexford</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Wicklow</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Carlow</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Dublin</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kildare</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kilkenny</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Laois</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Longford</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Louth</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Meath</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Offaly</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Westmeath</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Wexford</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Wicklow</a></li>
                 			</ul>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Garage</a>
+		                	<a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Garage</a>
 		                	<ul class="dropdown-menu" role="menu">
-		                  		<li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Clare</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Cork</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kerry</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Limerick</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Tipperary</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Waterford</a></li>
+		                  		<li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Clare</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Cork</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kerry</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Limerick</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Tipperary</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Waterford</a></li>
                 			</ul>
                             <li class="divider"></li>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?category=bed_bath,kitchen_dining" class="dropdown-item">All Homeware</a>
+		                	<a href="{% url 'listings' %}?category=bed_bath,kitchen_dining" class="dropdown-item">All Homeware</a>
 		                	<ul class="dropdown-menu" role="menu">
-		                  		<li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Antrim</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Armagh</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Cavan</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Derry</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Donegal</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Down</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Fermanagh</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Monaghan</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Tyrone</a></li>
+		                  		<li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Antrim</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Armagh</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Cavan</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Derry</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Donegal</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Down</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Fermanagh</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Monaghan</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Tyrone</a></li>
                 			</ul>
 		              	</li>
                     </ul>
@@ -185,54 +185,54 @@
                   	<ul class="dropdown-menu border-0" role="menu" aria-labelledby="dropdownMenu">
                           <li class="divider"></li>
                         <li class="dropdown-submenu">
-                            <a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Connacht</a>
+                            <a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Connacht</a>
 		                	<ul class="dropdown-menu" role="menu">
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Galway</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Leitrim</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Mayo</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Roscommon</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Sligo</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Galway</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Leitrim</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Mayo</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Roscommon</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Sligo</a></li>
                 			</ul>
                          <li class="divider"></li>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Leinster</a>
+		                	<a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Leinster</a>
 		                	<ul class="dropdown-menu" role="menu">
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Carlow</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Dublin</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kildare</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kilkenny</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Laois</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Longford</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Louth</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Meath</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Offaly</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Westmeath</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Wexford</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Wicklow</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Carlow</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Dublin</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kildare</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kilkenny</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Laois</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Longford</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Louth</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Meath</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Offaly</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Westmeath</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Wexford</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Wicklow</a></li>
                 			</ul>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Munster</a>
+		                	<a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Munster</a>
 		                	<ul class="dropdown-menu" role="menu">
-		                  		<li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Clare</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Cork</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Kerry</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Limerick</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Tipperary</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Waterford</a></li>
+		                  		<li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Clare</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Cork</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Kerry</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Limerick</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Tipperary</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Waterford</a></li>
                 			</ul>
                             <li class="divider"></li>
 		              	<li class="dropdown-submenu">
-		                	<a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Ulster</a>
+		                	<a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Ulster</a>
 		                	<ul class="dropdown-menu" role="menu">
-		                  		<li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Antrim</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Armagh</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Cavan</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Derry</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Donegal</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Down</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Fermanagh</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Monaghan</a></li>
-                                <li><a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Tyrone</a></li>
+		                  		<li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Antrim</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Armagh</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Cavan</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Derry</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Donegal</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Down</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Fermanagh</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Monaghan</a></li>
+                                <li><a href="{% url 'listings' %}?category=bed_bath" class="dropdown-item">Tyrone</a></li>
                 			</ul>
 		              	</li>
                     </ul>
