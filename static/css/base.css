@@ -297,7 +297,7 @@ input-group w-100 {
 
 .navbar-nav.navbar-left  .btn { position: absolute; z-index: 2; padding: 4px 24px; margin: 10px auto; transition: transform 0.3s; }
 .navbar-nav.navbar-right  .btn { position: absolute; z-index: 3; padding: 4px 24px; margin: 10px auto; transition: transform 0.3s; }
-.container-fluid .barzinho {background-color: rgb(228, 228, 228);}
+.container-fluid .barzinho {background-color: #222;}
 .navbar .navbar-collapse { position: relative; background-color:#ffffff;}
 
 .navbar .navbar-collapse .navbar-left > li:last-child { padding-left: 22px; }
@@ -307,7 +307,7 @@ input-group w-100 {
 #nav-collapse4 { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 342px; width: 100%; }
 #nav-collapse3 { position: absolute; z-index: 2; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 0px; width: 100%; }
 
-.navbar.navbar-default .nav-collapse { background-color: rgb(228, 228, 228); }
+.navbar.navbar-default .nav-collapse { background-color: #fff; }
 .navbar.navbar-inverse .nav-collapse { background-color: #222; }
 .navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
 .nav-collapse>li { float: left; color:rgb(228, 228, 228);}
@@ -341,7 +341,7 @@ input-group w-100 {
 /*Mult-level*/
 
 .dropdown-submenu {
-    position: relative;
+    position: relative; 
 }
 
 .dropdown-submenu>.dropdown-menu {
@@ -352,7 +352,7 @@ input-group w-100 {
     margin-right: auto;
     -webkit-border-radius: 0 6px 6px 6px;
     -moz-border-radius: 0 6px 6px;
-    border-radius: 0 6px 6px 6px;
+    border-radius: 0 6px 6px 6px; 
 }
 
 
@@ -368,15 +368,17 @@ input-group w-100 {
     border-width: 5px 0 5px 5px;
     border-left-color: #ccc;
     margin-top: 5px;
-    margin-right: -10px;
+    margin-right: -10px; 
 }
 
 .dropdown-submenu:hover>a:after {
     border-left-color: #fff;
+    background-color: rgb(228, 228, 228); 
 }
 
 .dropdown-submenu.pull-left {
     float: none;
+    background-color: rgb(228, 228, 228); 
 }
 
 .dropdown-submenu.pull-left>.dropdown-menu {
@@ -385,6 +387,7 @@ input-group w-100 {
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
+    background-color: rgb(228, 228, 228); 
 }
 
 /*mult-level*/
