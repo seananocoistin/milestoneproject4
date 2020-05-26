@@ -21,7 +21,7 @@
                 <hr>
                 <h2 class="logo-font mb-4">Thank You</h2>
                 <hr>
-                <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                <p class="text-black">Your transaction information is below. A confirmation e-mail message will be sent to you at <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
 
@@ -30,13 +30,13 @@
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
-                            <small class="text-muted">Order information:</small>
+                            <small class="text-muted">Transaction information:</small>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">Order Number</p>
+                            <p class="mb-0 text-black font-weight-bold">Transaction Number</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.order_number }}</p>
@@ -45,7 +45,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">Order Date</p>
+                            <p class="mb-0 text-black font-weight-bold">Transaction Date</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.date }}</p>
@@ -54,19 +54,16 @@
 
                     <div class="row">
                         <div class="col">
-                            <small class="text-muted">Order Details:</small>
+                            <small class="text-muted">Transaction Details:</small>
                         </div>
                     </div>
 
                     {% for item in order.lineitems.all %}
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="small mb-0 text-black font-weight-bold">
-                                {{ item.listing.name }}{% if item.listing_size %} - Size {{ item.listing.size|upper }}{% endif %}
-                            </p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="small mb-0">{{ item.quantity }} @ ${{ item.listing.price }} each</p>
+                            <p class="small mb-0">{{ item.quantity }} @ €{{ item.listing.price }} each</p>
                         </div>
                     </div>
                     {% endfor %}
@@ -163,7 +160,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">Order Total</p>
+                            <p class="mb-0 text-black font-weight-bold">Transaction Total</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.order_total }}</p>

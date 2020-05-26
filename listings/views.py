@@ -79,6 +79,31 @@ def listing_detail(request, listing_id):
 
     return render(request, 'listings/listing_detail.html', context)
 
+@login_required
+def sign_up(request):
+    """ A page to welcome people to the directory and where they can sign up and create a listing """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only directory owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ListingForm(request.POST, request.FILES)
+        if form.is_valid():
+            listing = form.save()
+            messages.success(request, 'Successfully sign up and added listing!')
+            return redirect(reverse('listing_detail', args=[listing.id]))
+        else:
+            messages.error(request, 'Failed to sign up and add a listing. Please ensure the form is valid.')
+    else:
+        form = ListingForm()
+        
+    template = 'listings/sign_up.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
 
 @login_required
 def add_listing(request):
