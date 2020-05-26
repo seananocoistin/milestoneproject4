@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.http import HttpResponse
 
 from .models import Listing, Category
 from .forms import ListingForm
@@ -33,9 +34,10 @@ def all_listings(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             listings = listings.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
+            print("is it still working here?")
             listings = listings.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
@@ -50,7 +52,7 @@ def all_listings(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('listings'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             listings = listings.filter(queries)
 

@@ -297,7 +297,7 @@ input-group w-100 {
 
 .navbar-nav.navbar-left  .btn { position: absolute; z-index: 2; padding: 4px 24px; margin: 10px auto; transition: transform 0.3s; }
 .navbar-nav.navbar-right  .btn { position: absolute; z-index: 3; padding: 4px 24px; margin: 10px auto; transition: transform 0.3s; }
-.container-fluid .barzinho {background-color:#35AE8D;}
+.container-fluid .barzinho {background-color: rgb(228, 228, 228);}
 .navbar .navbar-collapse { position: relative; background-color:#ffffff;}
 
 .navbar .navbar-collapse .navbar-left > li:last-child { padding-left: 22px; }
@@ -307,10 +307,10 @@ input-group w-100 {
 #nav-collapse4 { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 342px; width: 100%; }
 #nav-collapse3 { position: absolute; z-index: 2; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 0px; width: 100%; }
 
-.navbar.navbar-default .nav-collapse { background-color: #35AE8D; }
+.navbar.navbar-default .nav-collapse { background-color: rgb(228, 228, 228); }
 .navbar.navbar-inverse .nav-collapse { background-color: #222; }
 .navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
-.nav-collapse>li { float: left; color:#35AE8D }
+.nav-collapse>li { float: left; color:rgb(228, 228, 228);}
 
 .btn.btn-circle { border-radius: 50px; }
 .btn.btn-outline { background-color: transparent; }
@@ -395,7 +395,7 @@ input-group w-100 {
 
 @media screen and (min-width: 768px) {
     .navbar .navbar-collapse li li a:hover{
-        background-color: #35AE8D;
+        background-color: rgb(228, 228, 228);
         color:#ffffff;
     }
     .navbar .navbar-collapse li li a:active{
