@@ -5,14 +5,11 @@ from .models import Listing, Category
 
 class ListingAdmin(admin.ModelAdmin):
     list_display = (
-        'contact_details',
-        'business_name',
+        'name',
         'category',
+        'price',
         'rating',
         'image',
-        'business_hours',
-        'description',
-        'is_premium',
     )
 
    # ordering = ('',)
