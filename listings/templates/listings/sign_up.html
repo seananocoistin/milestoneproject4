@@ -44,7 +44,7 @@
                 </form>
             </div>
         </div>
-            <div class="row">
+        <div class="row">
             <div class="col-12 col-md-6">
                 <hr>
                 <h5 class="logo-font mb-4">2. Pay for the listing</h5>
@@ -56,7 +56,10 @@
                         </span>
                     </a>
             </div>
+        </div>
+        <br>
     </div>
+</div>
 </div>
 {% endblock %}
 
@@ -67,5 +70,23 @@
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to: ${file.name}`);
         });
+         $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('listing_size');
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'listing_size': size};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
     </script>
+
 {% endblock %}
